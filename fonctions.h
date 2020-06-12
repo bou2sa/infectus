@@ -61,7 +61,7 @@ enum{WALK_RIGHT, WALK_LEFT, IMMOBILE, JUMP};
 
 
 
-/*_________   structure numero 1  ____________ */
+
 
 
 
@@ -84,7 +84,7 @@ struct Acteurs
 
 
 
-/*_________   structure numero 2  ____________ */
+
 
 typedef struct Boutons Boutons ;
 struct Boutons 
@@ -102,7 +102,6 @@ struct Boutons
     SDL_Rect posB5;
 };
 
-/*_________   structure de l hero  ____________ */
 
 typedef struct Hero Hero ;
 struct Hero 
@@ -110,16 +109,16 @@ struct Hero
 
 SDL_Surface *sprite;
 
-/* Coordonnées du héros */
+
 Sint16 x , y ;
 Sint16 Ysaut;
 
-/* Variables utiles pour l'animation */
+
 int frame_timer, frame_number;
 int etat  , direction ; 
 
-float x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , x13 , x14 , x15 , x16 ;  //points de verification de collision parfaite 
-float y1 , y2 , y3 , y4 , y5 , y6 , y7 , y8 , y9 , y10 , y11 , y12 , y13 , y14 , y15 , y16 ;  // points de verification de collision parfaite 
+float x1 , x2 , x3 , x4 , x5 , x6 , x7 , x8 , x9 , x10 , x11 , x12 , x13 , x14 , x15 , x16 ;  
+float y1 , y2 , y3 , y4 , y5 , y6 , y7 , y8 , y9 , y10 , y11 , y12 , y13 , y14 , y15 , y16 ;   
 
 int jump, ground;
 int PLAYER_SPEED ;
@@ -128,7 +127,7 @@ int PLAYER_SPEED ;
 
 
 
-/* prototypes */
+
 void initialisation(Acteurs* acteurs);
 
 void initializeHero(Hero* hero) ;
