@@ -86,21 +86,7 @@ struct Acteurs
 
 
 
-typedef struct Boutons Boutons ;
-struct Boutons 
-{
-	  SDL_Surface *b1 ;
-    SDL_Surface *b2 ;
-    SDL_Surface *b3 ;
-    SDL_Surface *b4 ;
-    SDL_Surface *b5 ;
 
-    SDL_Rect posB1;
-    SDL_Rect posB2;
-    SDL_Rect posB3;
-    SDL_Rect posB4;
-    SDL_Rect posB5;
-};
 
 
 typedef struct Hero Hero ;
