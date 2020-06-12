@@ -19,7 +19,7 @@
 
 
 
-/*________________________________________________________________________________________*/
+
 
 
 
@@ -41,11 +41,6 @@ void initialisation(Acteurs* acteurs)
 
 
 
-/*________________________________________________________________________________________*/
-
-
-
-/*---fonction d initialisation de l hero---*/
 
 void initializeHero(Hero* hero)
 {
@@ -57,15 +52,14 @@ void initializeHero(Hero* hero)
 	SDL_SetColorKey(hero->sprite, SDL_SRCCOLORKEY, SDL_MapRGB(hero->sprite->format, 255, 255, 255));
 
 
-	//Indique l'état et la direction de notre héros
+	
 	hero->direction = RIGHT;
 	hero->etat = IMMOBILE;
 
-	//Réinitialise le timer de l'animation et la frame
+	
 	hero->frame_timer = TIME_BETWEEN_2_FRAMES;
 	hero->frame_number = 0;
 
-	/* Coordonnées de démarrage de notre héros */
 	hero->x = 200 ;
 	hero->y = 200 ;
 
@@ -78,16 +72,11 @@ void initializeHero(Hero* hero)
 
 
 
-/*________________________________________________________________________________________*/
-
-
-
-/*---fontion pour afficher l'hero ---*//////////////////////////
 
 void drawHero(Hero hero , Acteurs *acteurs)
 {
 
-/* Rectangle de destination à blitter */
+
 SDL_Rect dest;
 dest.x = hero.x - acteurs->camera.x;
 dest.y = hero.y ;
@@ -98,7 +87,7 @@ frame.y = 0;
 frame.w = PLAYER_WIDTH;
 frame.h = PLAYER_HEIGHT;
 
-/* Blitte notre héros sur l'écran aux coordonnées x et y */
+/
 SDL_BlitSurface(acteurs->backg, &acteurs->camera, acteurs->screen, NULL);
 SDL_BlitSurface(hero.sprite , &frame , acteurs->screen , &dest) ;
 SDL_SetColorKey(hero.sprite, SDL_SRCCOLORKEY, SDL_MapRGB(hero.sprite->format, 255, 255, 255));
@@ -263,10 +252,7 @@ void centerScrollingOnPlayer(Hero hero, Acteurs* acteurs)
 			{
 				acteurs->camera.x += hero.PLAYER_SPEED;
 			}
-		/*if(acteurs->camera.x > Backg_W - SCREEN_WIDTH)
-			{
-				acteurs->camera.x = Backg_W - SCREEN_WIDTH;
-			}*/
+		
 	}
 	
 	else if(acteurs->event.key.keysym.sym == SDLK_LEFT)
@@ -308,10 +294,7 @@ return (color) ;
 
 }
 
-/*________________________________________________________________________________________*/
 
-
-//pour mettre a jour les points de collision ! on 12 points de collision !!!
 
 
 void update_points_de_collision(Hero* hero)
@@ -365,10 +348,6 @@ void update_points_de_collision(Hero* hero)
 
 }
 
-
-/*________________________________________________________________________________________*/
-
-//fonction de verification de collision entre le bachground du premier stage et l'hero ! cette fonction retourne 1 en cas de collision sinon 0
 
 
 int verification_collision_player_map_droite(Acteurs* acteurs , Hero* hero)
