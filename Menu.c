@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
 
 
   Acteurs acteurs;
-  Boutons boutons;
+  
   Hero hero ;
  
   
